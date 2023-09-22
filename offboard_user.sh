@@ -1,8 +1,9 @@
 #This script performs various offboarding tasks when a user leaves the company.
+#This is build upon the work of previous IT Wizards here at Unbounce.-- Behnam
 username=$1
 
 #Set log location, pipe all actions to log file.
-logloc="/Volumes/GoogleDrive/Team Drives/ITOps Team Drive/Offboarding/google_suite/test_log.log"
+logloc="/Volumes/GoogleDrive/Team Drives/IT/Offboarding/test_log.log"
 exec 3>&1 4>&2
 trap 'exec 2>&4 1>&3' 0 1 2 3
 exec 1>"$logloc" 2>&1
